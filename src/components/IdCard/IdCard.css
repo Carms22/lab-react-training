@@ -1,0 +1,20 @@
+div {
+  margin: 0 5px;
+}
+h3 {
+  margin: 0;
+}
+.card-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  max-width: 500px;
+  max-height: 300px;
+
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
