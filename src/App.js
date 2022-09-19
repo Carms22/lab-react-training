@@ -3,7 +3,7 @@ import './App.css';
 import student from './data/students.json'
 import IdCard from './components/IdCard/IdCard';
 import Greetings from './components/Greetings/Greetings';
-
+import Random from './components/Random/Random';
 function App() {
 
   return (
@@ -15,9 +15,9 @@ function App() {
               <Greetings lang={student.lang}>{student.firstName}</Greetings>          
             </IdCard>
           )
-          
         })
       }
+      <Random min={1} max={6}/>
       
     </div>
   );
