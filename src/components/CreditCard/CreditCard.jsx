@@ -9,7 +9,7 @@ const CreditCard = ({ type, number, expirationMonth, expirationYear, bank, owner
     return <h4>{newNumber}</h4>
   }
   return(
-    <div className="card" style= {{backgroundColor: color }}>
+    <div className="card" style= {{backgroundColor: bgColor, color: color }}>
       <p>{type}</p>
       {parsNumber(number)}
       <section className="row">

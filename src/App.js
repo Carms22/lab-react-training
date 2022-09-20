@@ -7,6 +7,8 @@ import Random from './components/Random/Random';
 import BoxColor from './components/BoxColor/BoxColor'
 import CreditCards from './components/CreditCard/CreditCard'
 import cards from './data/creditCard.json'
+import Rating from './components/Rating/Rating';
+import LikeButton from './components/LikeButton/LikeButton';
 
 
 function App() {
@@ -36,9 +38,16 @@ function App() {
           )
         })
       }
-        
       </div>
-      
+      <div>
+        <Rating>0</Rating>
+        <Rating>1</Rating>
+        <Rating>2</Rating>
+        <Rating>3</Rating>
+        <Rating>4</Rating>
+        <Rating>5</Rating>
+      </div>
+      <LikeButton/>
     </div>
   );
 }
