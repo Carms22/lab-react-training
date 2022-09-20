@@ -10,6 +10,7 @@ import cards from './data/creditCard.json'
 import Rating from './components/Rating/Rating';
 import LikeButton from './components/LikeButton/LikeButton';
 import ClickablePicture from './components/ClickablePicture/ClickablePicture';
+import Dice from './components/Dice/Dice'
 
 
 
@@ -49,9 +50,11 @@ function App() {
         <Rating>4</Rating>
         <Rating>5</Rating>
       </div>
+      <div>
       <LikeButton/>
-
       <ClickablePicture img='./assets/images/maxence.png'  imgClicked='./assets/images/maxence-glasses.png'/>
+      <Dice></Dice>
+      </div>
     </div>
   );
 }
