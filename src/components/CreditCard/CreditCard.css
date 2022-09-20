@@ -1,0 +1,21 @@
+p h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  direction: row;
+  justify-content: space-evenly;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  max-height: 200px;
+  min-width: 300px;
+  min-height: 200px;
+  border-radius: 10%;
+  border-color: lightgray ;
+}

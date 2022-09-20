@@ -1,6 +1,5 @@
 import './IdCard.css'
 
-
 const IdCard = ({lastName, firstName, gender, height, birth, picture, children}) => {
   return (
     <div className='card-container'>
@@ -13,7 +12,7 @@ const IdCard = ({lastName, firstName, gender, height, birth, picture, children})
         <h3>LastName: {lastName}</h3>
         <h3>Gender: {gender}</h3>
         <h3>Height: {height}</h3>
-        <h3>Birthday: {birth}</h3>
+        <h3>Birthday: { new Date (birth).toDateString()}</h3>
       </div>
     </div>
   )

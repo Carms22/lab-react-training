@@ -17,7 +17,7 @@ const Greetings = ({lang, children}) => {
    
     return(
       <div>
-      {message(lang)}
+        {message(lang)}
       </div>
   )
 }
