@@ -9,6 +9,8 @@ import CreditCards from './components/CreditCard/CreditCard'
 import cards from './data/creditCard.json'
 import Rating from './components/Rating/Rating';
 import LikeButton from './components/LikeButton/LikeButton';
+import ClickablePicture from './components/ClickablePicture/ClickablePicture';
+
 
 
 function App() {
@@ -48,6 +50,8 @@ function App() {
         <Rating>5</Rating>
       </div>
       <LikeButton/>
+
+      <ClickablePicture img='./assets/images/maxence.png'  imgClicked='./assets/images/maxence-glasses.png'/>
     </div>
   );
 }
