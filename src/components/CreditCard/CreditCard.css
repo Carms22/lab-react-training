@@ -9,14 +9,14 @@ p h2 {
   justify-content: space-evenly;
 }
 
-.card {
+.cardCredit {
   display: flex;
   flex-direction: column;
-  max-width: 550px;
+  max-width: 450px;
   max-height: 200px;
-  min-width: 400px;
+  min-width: 350px;
   min-height: 250px;
-  border-radius: 10%;
+  border-radius: 5%;
   border-color: lightgray ;
 }
 

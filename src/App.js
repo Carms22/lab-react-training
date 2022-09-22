@@ -11,6 +11,7 @@ import LikeButton from './components/LikeButton/LikeButton';
 import ClickablePicture from './components/ClickablePicture/ClickablePicture';
 import Dice from './components/Dice/Dice';
 import DriverCard from './components/DriverCard/DriverCard';
+import Carousel from './components/Carousel/Carousel'
 
 // img
 import img from './assets/images/maxence.png';
@@ -76,6 +77,16 @@ function App() {
       <LikeButton/>
       <ClickablePicture img={img}  imgClicked={imgClicked}/>
       <Dice/>
+      </div>
+      <div>
+      <Carousel
+        images={[
+          'https://randomuser.me/api/portraits/women/1.jpg',
+          'https://randomuser.me/api/portraits/men/1.jpg',
+          'https://randomuser.me/api/portraits/women/2.jpg',
+          'https://randomuser.me/api/portraits/men/2.jpg'
+         ]}
+      />
       </div>
     </div>
   );
