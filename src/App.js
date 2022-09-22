@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import student from './data/students.json'
 import IdCard from './components/IdCard/IdCard';
@@ -76,7 +75,7 @@ function App() {
       <div className='row'>
       <LikeButton/>
       <ClickablePicture img={img}  imgClicked={imgClicked}/>
-      <Dice></Dice>
+      <Dice/>
       </div>
     </div>
   );

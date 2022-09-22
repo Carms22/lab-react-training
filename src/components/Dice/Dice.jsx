@@ -1,31 +1,37 @@
 import React from "react";
 import './Dice.css';
 
+//image
+import diceEmpty from '../../assets/images/dice-empty.png';
+import dice_1 from '../../assets/images/dice1.png';
+import dice_2 from '../../assets/images/dice2.png';
+import dice_3 from '../../assets/images/dice3.png';
+import dice_4 from '../../assets/images/dice4.png';
+import dice_5 from '../../assets/images/dice5.png';
+import dice_6 from '../../assets/images/dice6.png';
+
 class Dice extends React.Component {
   
   state = {
-    img: "../../assets/images/dice-empty.png",
+    img: diceEmpty,
     imgPosibi: [
-      "../../assets/images/dice1.png",
-      "../../assets/images/dice2.png",
-      "../../assets/images/dice3.png",
-      "../../assets/images/dice4.png",
-      "../../assets/images/dice5.png",
-      "../../assets/images/dice6.png"
+      dice_1,
+      dice_2,
+      dice_3,
+      dice_4,
+      dice_5,
+      dice_6
     ]
   }
   random = () => {
     return Math.floor(Math.random() * 5)
   }
-
-  index = this.random()
  
   changeDice = () => {
-    
     console.log(this.index);
-    this.setState({img:this.state.img},() => {
+    this.setState({img: this.state.img},() => {
       setTimeout(()=>{
-        this.setState({img:this.state.imgPosibi[this.random()]})
+        this.setState({img: this.state.imgPosibi[this.random()]})
       },1000)
       })
   }
