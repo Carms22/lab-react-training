@@ -9,9 +9,9 @@ class ClickablePicture extends React.Component {
 
   changePicture = () => {
     if(this.state.img === this.props.img){
-      this.setState({img:this.props.imgClicked})
+      this.setState({img: this.props.imgClicked})
     }else{
-      this.setState({img:this.props.img})
+      this.setState({img: this.props.img})
     }
   }
 

@@ -1,29 +1,30 @@
 import React from "react";
 import './Rating.css';
-import {AiOutlineFire} from "react-icons/ai" 
-import {AiFillFire} from "react-icons/ai" 
 
-const Rating = (children) => {
-  let numberStarts = (children) =>{
-    switch (children) {
-      case children < 0.5:
-        return <h4>Rating:<AiOutlineFire/><AiOutlineFire/><AiOutlineFire/><AiOutlineFire/><AiOutlineFire/></h4>
-      case 0.5 < children < 1:
-        return <h4>Rating:<AiFillFire/><AiOutlineFire/><AiOutlineFire/><AiOutlineFire/><AiOutlineFire/></h4>
-      case 1 < children < 1.9:
-        return <h4>Rating: <AiFillFire/><AiFillFire/><AiOutlineFire/><AiOutlineFire/><AiOutlineFire/></h4>
-      case 2 < children < 2.9:
-        return <h4>Rating:<AiFillFire/><AiFillFire/><AiFillFire/><AiOutlineFire/><AiOutlineFire/></h4>
-      case 3 < children < 3.9:
-        return <h4>Rating:<AiFillFire/><AiFillFire/><AiFillFire/><AiOutlineFire/></h4>
-      case 4 < children:
-        return <h4>Rating:<AiFillFire/><AiFillFire/><AiFillFire/><AiFillFire/><AiFillFire/></h4>
+const Rating = (props) => {
+  
+  const starts = Math.ceil(props.children);
+
+  const numberStarts = () =>{
+    switch (starts) {
+      case 0:
+        return 'Rating: ☆☆☆☆☆'
+      case 1:
+        return 'Rating: ★☆☆☆☆'
+      case 2:
+        return 'Rating: ★★☆☆☆'
+      case 3:
+        return 'Rating: ★★★☆☆'
+      case 4:
+        return 'Rating: ★★★★☆'
+      case 5:
+        return 'Rating: ★★★★★'
       default:
       }
   }
   return (
     <div>
-      {numberStarts(children)}
+      <h2> {numberStarts()}</h2>
     </div>
   )
 }

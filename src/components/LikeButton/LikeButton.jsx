@@ -4,29 +4,34 @@ import './LikeButton.css'
 class LikeButton extends Component {
   state = {
     count: 0 ,
-    color: ['purple','blue','green','yellow','orange','red']
+    color: ['purple','blue','green','yellow','orange','red'],
+    colorChoose: ''
   }
 
-  add = (event) => {
-    const numberToIncrement = Number(event.target.value) || 1 // target.value siempre es string, por eso necesito el number
-
+  randomColor = (color) => {
+    console.log(color) 
+    const index = Math.floor(Math.random()*color.length)
+    return { 
+      colorChoose : color[index]
+    }
+  }
+  add = () => {
+    this.randomColor (this.state.color)
+    console.log( this.randomColor (this.state.color));
     this.setState({ count: this.state.count + 1 }, () => {
-      console.log('added 1')
-    }) // no puedo poner ++ porque sino modifico this.state y eso no mola
+    }) 
+   
   }
 
-randomColor = (color) => {
-  return color(Math.floor().Math.random()*color.length)
-}
+
 // style = {this.randomColor()}
 
   render() {
     console.log('render')
-
-    const { count, color } = this.state
+    const { count, colorChoose } = this.state
     return (
       <div>
-        <button className="Button" onClick={this.add}  >{count} Likes</button>
+        <button className="Button" onClick={this.add} style ={{backgroundColor: colorChoose}}>{count} Likes</button>
       </div>
     )
   }

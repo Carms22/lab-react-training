@@ -1,4 +1,4 @@
-p h4 {
+p h2 {
   margin: 0;
   padding: 0;
 }
@@ -14,8 +14,12 @@ p h4 {
   flex-direction: column;
   max-width: 550px;
   max-height: 200px;
-  min-width: 300px;
-  min-height: 200px;
+  min-width: 400px;
+  min-height: 250px;
   border-radius: 10%;
   border-color: lightgray ;
+}
+
+.card > div {
+  justify-content: flex-end;
 }
