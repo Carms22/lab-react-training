@@ -36,16 +36,16 @@ class Carousel extends Component {
   left =() => {
     this.setState((prevState) => {
       console.log("Left");
-      if( prevState.index === 1 ){
+      if( prevState.index <= this.state.imagesLength && prevState.index > 0){
         console.log("entro en if the Left",prevState.index);
         return {
           currentImg: this.props.images[prevState.index],
           index: prevState.index -1
         }
-      } else if ( prevState.index === this.state.imagesLength ) {
+      } else if ( prevState.index === 0 ) {
         return {
           currentImg: this.props.images[prevState.index],
-          index:0,
+          index:3,
         }
       } else {
         return {
