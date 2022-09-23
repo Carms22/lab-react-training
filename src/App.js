@@ -12,6 +12,8 @@ import ClickablePicture from './components/ClickablePicture/ClickablePicture';
 import Dice from './components/Dice/Dice';
 import DriverCard from './components/DriverCard/DriverCard';
 import Carousel from './components/Carousel/Carousel'
+import NumberTable from './components/NumberTable/NumberTable';
+import FaceBook from './components/FaceBook/FaceBook'
 
 // img
 import img from './assets/images/maxence.png';
@@ -87,6 +89,12 @@ function App() {
           'https://randomuser.me/api/portraits/men/2.jpg'
          ]}
       />
+      </div>
+      <div>
+        <NumberTable limit={12} className="all" />
+      </div>
+      <div>
+        <FaceBook/>
       </div>
     </div>
   );

@@ -8,3 +8,13 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+.all{
+  max-width: 500px;
+  max-height: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: start;
+
+}
