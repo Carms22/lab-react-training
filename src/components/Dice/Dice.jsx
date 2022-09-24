@@ -25,7 +25,7 @@ class Dice extends React.Component {
     ]
   }
   random = () => {
-    return Math.floor(Math.random() * 5)
+    return Math.floor(Math.random() * this.state.imgPosibi.length)
   }
   emptyDice = () => { return this.setState({img: this.state.imgEmty})
   }

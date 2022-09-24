@@ -23,9 +23,6 @@ class LikeButton extends Component {
    
   }
 
-
-// style = {this.randomColor()}
-
   render() {
     console.log('render')
     const { count, colorChoose } = this.state

@@ -12,7 +12,7 @@ const CreditCard = ({ type, number, expirationMonth, expirationYear, bank, owner
   }
   return(
     <div className="cardCredit" style= {{backgroundColor: bgColor, color: color }}>
-      <img src={type === "Visa" ? visa : master } alt="type"/>
+      <img src={type === "Visa" ? {visa} : {master} } alt="type"/>
       {parsNumber(number)}
       <section className="row">
         <p>{expirationMonth}</p>
