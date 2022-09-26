@@ -7,7 +7,8 @@ const BoxColor =({ r, g, b }) => {
     return <p style={{backgroundColor: color}}>{color}</p>
   }
   return(
-    <div>
+    <div style={{backgroundColor: `rgb(${r},${g},${b})`}}>
+      <p>rgb({r}, {g}, {b})</p>
       {chooseColor(r, g, b )}
     </div>
   )

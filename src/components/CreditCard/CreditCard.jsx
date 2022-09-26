@@ -1,7 +1,7 @@
 import React from "react";
 import './CreditCard.css';
-const visa = "../../assets/images/visa.png"
-const master = "../../assets/images/master-card.svg"
+import visa from "../../assets/images/visa.png"
+import master from "../../assets/images/master-card.svg"
 
 
 const CreditCard = ({ type, number, expirationMonth, expirationYear, bank, owner, bgColor, color}) => {
@@ -12,13 +12,15 @@ const CreditCard = ({ type, number, expirationMonth, expirationYear, bank, owner
   }
   return(
     <div className="cardCredit" style= {{backgroundColor: bgColor, color: color }}>
-      <img src={type === "Visa" ? {visa} : {master} } alt="type"/>
+      <div className="cardCredit__img">
+        {type === 'Master Card' && (<img src={master} alt="type" />)}
+        {type === 'Visa' && (<img src={visa} alt="type" />)}
+      </div>
       {parsNumber(number)}
-      <section className="row">
-        <p>{expirationMonth}</p>
-        <p>{expirationYear}</p>
+      <div className="row">
+        <p>Expires {expirationMonth < 10 ? `${expirationMonth}`: expirationMonth}/{expirationYear.toString().slice(-2)}</p>
         <p>{bank}</p>
-      </section>
+      </div>
       <p>{owner}</p>
     </div>
   
