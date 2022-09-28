@@ -14,10 +14,11 @@ import DriverCard from './components/DriverCard/DriverCard';
 import Carousel from './components/Carousel/Carousel'
 import NumberTable from './components/NumberTable/NumberTable';
 import FaceBook from './components/FaceBook/FaceBook'
-
+import SignupPage from './components/SignupPage/SignupPage';
 // img
 import img from './assets/images/maxence.png';
 import imgClicked from './assets/images/maxence-glasses.png';
+
 
 
 
@@ -96,6 +97,7 @@ function App() {
       <div>
         <FaceBook/>
       </div>
+      <SignupPage/>
     </div>
   );
 }
